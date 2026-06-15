@@ -1,0 +1,250 @@
+-- ============================================================
+-- SmartRx — 200 Medicine Seed
+-- Run once: psql -U postgres -d smartrx -f server/seed-medicines.sql
+-- Safe to re-run: ON CONFLICT DO NOTHING skips duplicates
+-- ============================================================
+
+INSERT INTO medicines (name, category) VALUES
+-- Analgesics / Antipyretics
+('Paracetamol', 'Analgesic'),
+('Ibuprofen', 'Analgesic'),
+('Aspirin', 'Analgesic'),
+('Diclofenac', 'Analgesic'),
+('Naproxen', 'Analgesic'),
+('Mefenamic Acid', 'Analgesic'),
+('Tramadol', 'Analgesic'),
+('Celecoxib', 'Analgesic'),
+('Ketorolac', 'Analgesic'),
+('Meloxicam', 'Analgesic'),
+
+-- Antibiotics
+('Amoxicillin', 'Antibiotic'),
+('Amoxicillin + Clavulanate', 'Antibiotic'),
+('Azithromycin', 'Antibiotic'),
+('Clarithromycin', 'Antibiotic'),
+('Ciprofloxacin', 'Antibiotic'),
+('Levofloxacin', 'Antibiotic'),
+('Doxycycline', 'Antibiotic'),
+('Metronidazole', 'Antibiotic'),
+('Ceftriaxone', 'Antibiotic'),
+('Cefixime', 'Antibiotic'),
+('Cefuroxime', 'Antibiotic'),
+('Cephalexin', 'Antibiotic'),
+('Erythromycin', 'Antibiotic'),
+('Trimethoprim + Sulfamethoxazole', 'Antibiotic'),
+('Clindamycin', 'Antibiotic'),
+('Nitrofurantoin', 'Antibiotic'),
+('Vancomycin', 'Antibiotic'),
+('Meropenem', 'Antibiotic'),
+('Piperacillin + Tazobactam', 'Antibiotic'),
+('Flucloxacillin', 'Antibiotic'),
+
+-- Antifungals
+('Fluconazole', 'Antifungal'),
+('Itraconazole', 'Antifungal'),
+('Clotrimazole', 'Antifungal'),
+('Terbinafine', 'Antifungal'),
+('Nystatin', 'Antifungal'),
+
+-- Antivirals
+('Acyclovir', 'Antiviral'),
+('Oseltamivir', 'Antiviral'),
+('Valacyclovir', 'Antiviral'),
+
+-- Antiparasitics
+('Albendazole', 'Antiparasitic'),
+('Mebendazole', 'Antiparasitic'),
+('Chloroquine', 'Antiparasitic'),
+('Artemether + Lumefantrine', 'Antiparasitic'),
+('Ivermectin', 'Antiparasitic'),
+
+-- Antihistamines
+('Cetirizine', 'Antihistamine'),
+('Loratadine', 'Antihistamine'),
+('Fexofenadine', 'Antihistamine'),
+('Chlorpheniramine', 'Antihistamine'),
+('Diphenhydramine', 'Antihistamine'),
+('Levocetirizine', 'Antihistamine'),
+('Desloratadine', 'Antihistamine'),
+('Hydroxyzine', 'Antihistamine'),
+
+-- Gastro / Antacids
+('Omeprazole', 'Gastro'),
+('Pantoprazole', 'Gastro'),
+('Esomeprazole', 'Gastro'),
+('Rabeprazole', 'Gastro'),
+('Ranitidine', 'Gastro'),
+('Famotidine', 'Gastro'),
+('Domperidone', 'Gastro'),
+('Metoclopramide', 'Gastro'),
+('Ondansetron', 'Gastro'),
+('Loperamide', 'Gastro'),
+('Bisacodyl', 'Gastro'),
+('Lactulose', 'Gastro'),
+('Ispaghula Husk', 'Gastro'),
+('Hyoscine Butylbromide', 'Gastro'),
+('Sucralfate', 'Gastro'),
+('Simethicone', 'Gastro'),
+('Zinc Sulphate', 'Gastro'),
+('Oral Rehydration Salts', 'Gastro'),
+
+-- Respiratory
+('Salbutamol', 'Respiratory'),
+('Ipratropium Bromide', 'Respiratory'),
+('Budesonide', 'Respiratory'),
+('Fluticasone', 'Respiratory'),
+('Salmeterol', 'Respiratory'),
+('Montelukast', 'Respiratory'),
+('Theophylline', 'Respiratory'),
+('Dextromethorphan', 'Respiratory'),
+('Guaifenesin', 'Respiratory'),
+('Bromhexine', 'Respiratory'),
+('Ambroxol', 'Respiratory'),
+('Codeine', 'Respiratory'),
+('Beclometasone', 'Respiratory'),
+('Tiotropium', 'Respiratory'),
+('Acetylcysteine', 'Respiratory'),
+
+-- Cardiovascular
+('Amlodipine', 'Cardiovascular'),
+('Atenolol', 'Cardiovascular'),
+('Metoprolol', 'Cardiovascular'),
+('Bisoprolol', 'Cardiovascular'),
+('Carvedilol', 'Cardiovascular'),
+('Enalapril', 'Cardiovascular'),
+('Lisinopril', 'Cardiovascular'),
+('Ramipril', 'Cardiovascular'),
+('Losartan', 'Cardiovascular'),
+('Valsartan', 'Cardiovascular'),
+('Telmisartan', 'Cardiovascular'),
+('Hydrochlorothiazide', 'Cardiovascular'),
+('Furosemide', 'Cardiovascular'),
+('Spironolactone', 'Cardiovascular'),
+('Digoxin', 'Cardiovascular'),
+('Nitroglycerin', 'Cardiovascular'),
+('Isosorbide Mononitrate', 'Cardiovascular'),
+('Warfarin', 'Cardiovascular'),
+('Heparin', 'Cardiovascular'),
+('Clopidogrel', 'Cardiovascular'),
+('Aspirin Low Dose', 'Cardiovascular'),
+('Nifedipine', 'Cardiovascular'),
+('Diltiazem', 'Cardiovascular'),
+('Verapamil', 'Cardiovascular'),
+('Hydralazine', 'Cardiovascular'),
+
+-- Lipid-Lowering
+('Atorvastatin', 'Lipid-Lowering'),
+('Simvastatin', 'Lipid-Lowering'),
+('Rosuvastatin', 'Lipid-Lowering'),
+('Fenofibrate', 'Lipid-Lowering'),
+('Gemfibrozil', 'Lipid-Lowering'),
+
+-- Diabetes
+('Metformin', 'Diabetes'),
+('Glibenclamide', 'Diabetes'),
+('Glimepiride', 'Diabetes'),
+('Gliclazide', 'Diabetes'),
+('Sitagliptin', 'Diabetes'),
+('Empagliflozin', 'Diabetes'),
+('Dapagliflozin', 'Diabetes'),
+('Pioglitazone', 'Diabetes'),
+('Insulin Regular', 'Diabetes'),
+('Insulin NPH', 'Diabetes'),
+('Insulin Glargine', 'Diabetes'),
+('Insulin Lispro', 'Diabetes'),
+('Liraglutide', 'Diabetes'),
+
+-- Thyroid
+('Levothyroxine', 'Thyroid'),
+('Carbimazole', 'Thyroid'),
+('Propylthiouracil', 'Thyroid'),
+
+-- Neurology / Psychiatry
+('Diazepam', 'Neurology'),
+('Lorazepam', 'Neurology'),
+('Alprazolam', 'Neurology'),
+('Clonazepam', 'Neurology'),
+('Phenytoin', 'Neurology'),
+('Carbamazepine', 'Neurology'),
+('Valproate', 'Neurology'),
+('Levetiracetam', 'Neurology'),
+('Amitriptyline', 'Neurology'),
+('Sertraline', 'Neurology'),
+('Fluoxetine', 'Neurology'),
+('Escitalopram', 'Neurology'),
+('Citalopram', 'Neurology'),
+('Paroxetine', 'Neurology'),
+('Venlafaxine', 'Neurology'),
+('Mirtazapine', 'Neurology'),
+('Risperidone', 'Neurology'),
+('Olanzapine', 'Neurology'),
+('Haloperidol', 'Neurology'),
+('Propranolol', 'Neurology'),
+('Sumatriptan', 'Neurology'),
+('Topiramate', 'Neurology'),
+
+-- Vitamins / Supplements
+('Vitamin C', 'Vitamin'),
+('Vitamin D3', 'Vitamin'),
+('Vitamin B Complex', 'Vitamin'),
+('Vitamin B12', 'Vitamin'),
+('Folic Acid', 'Vitamin'),
+('Iron Sulphate', 'Vitamin'),
+('Calcium Carbonate', 'Vitamin'),
+('Magnesium Oxide', 'Vitamin'),
+('Zinc', 'Vitamin'),
+('Multivitamin', 'Vitamin'),
+('Omega-3 Fatty Acids', 'Vitamin'),
+
+-- Corticosteroids
+('Prednisolone', 'Corticosteroid'),
+('Dexamethasone', 'Corticosteroid'),
+('Hydrocortisone', 'Corticosteroid'),
+('Methylprednisolone', 'Corticosteroid'),
+('Betamethasone', 'Corticosteroid'),
+('Triamcinolone', 'Corticosteroid'),
+
+-- Musculoskeletal
+('Cyclobenzaprine', 'Musculoskeletal'),
+('Baclofen', 'Musculoskeletal'),
+('Tizanidine', 'Musculoskeletal'),
+('Colchicine', 'Musculoskeletal'),
+('Allopurinol', 'Musculoskeletal'),
+('Methotrexate', 'Musculoskeletal'),
+('Hydroxychloroquine', 'Musculoskeletal'),
+
+-- Dermatology
+('Hydrocortisone Cream', 'Dermatology'),
+('Betamethasone Cream', 'Dermatology'),
+('Clotrimazole Cream', 'Dermatology'),
+('Mupirocin', 'Dermatology'),
+('Permethrin', 'Dermatology'),
+('Tretinoin', 'Dermatology'),
+('Benzoyl Peroxide', 'Dermatology'),
+('Calamine Lotion', 'Dermatology'),
+
+-- Ophthalmology
+('Ciprofloxacin Eye Drops', 'Ophthalmology'),
+('Chloramphenicol Eye Drops', 'Ophthalmology'),
+('Tobramycin Eye Drops', 'Ophthalmology'),
+('Dexamethasone Eye Drops', 'Ophthalmology'),
+('Timolol Eye Drops', 'Ophthalmology'),
+('Artificial Tears', 'Ophthalmology'),
+
+-- ENT
+('Xylometazoline Nasal Spray', 'ENT'),
+('Fluticasone Nasal Spray', 'ENT'),
+('Mometasone Nasal Spray', 'ENT'),
+('Oxymetazoline Nasal Spray', 'ENT'),
+
+-- Emergency
+('Adrenaline', 'Emergency'),
+('Atropine', 'Emergency'),
+('Dopamine', 'Emergency'),
+('Noradrenaline', 'Emergency'),
+('Naloxone', 'Emergency'),
+('Activated Charcoal', 'Emergency'),
+('Sodium Bicarbonate', 'Emergency'),
+('Magnesium Sulphate', 'Emergency')
+
+ON CONFLICT (name) DO NOTHING;
