@@ -1,0 +1,25 @@
+# Node
+node_modules/
+server/node_modules/
+npm-debug.log*
+
+# Build
+dist/
+dist-ssr/
+
+# Environment — never commit these
+.env
+server/.env
+
+# Vite
+*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
