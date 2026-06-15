@@ -202,7 +202,7 @@ Authorization: Bearer <token>
 
 ---
 
-## Database Design (CS 236 ADBMS)
+## Database Design
 
 ### Tables (8)
 - `doctors` — user accounts with bcrypt-hashed passwords
